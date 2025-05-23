@@ -1,22 +1,31 @@
+
 import { ArrowDown, Play } from 'lucide-react';
+
 const Hero = () => {
-  return <section id="home" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-600 via-purple-700 to-orange-500 flex items-center">
-      {/* Background Decorative Elements */}
+  return (
+    <section id="home" className="min-h-screen bg-indigo-700 flex items-center relative overflow-hidden">
+      {/* Decorative elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-orange-300/20 rounded-full blur-lg"></div>
-        <div className="absolute bottom-40 left-1/4 w-40 h-40 bg-purple-300/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-10 w-28 h-28 bg-white/5 rounded-full blur-xl"></div>
+        <div className="absolute top-20 left-10 w-12 h-12 bg-yellow-400 rounded-full"></div>
+        <div className="absolute bottom-20 right-10 w-8 h-8 bg-white/20 rounded-full"></div>
+        <div className="absolute top-1/2 right-40 w-16 h-16 bg-indigo-500 rounded-full opacity-30"></div>
+        <div className="absolute bottom-40 left-1/3 w-12 h-12 bg-white/10 rounded-full"></div>
+        <svg className="absolute top-20 right-20" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M10 25C15 15 25 15 30 25" stroke="white" strokeWidth="1" strokeLinecap="round"/>
+        </svg>
+        <svg className="absolute bottom-40 right-1/4" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M10 25C15 15 25 15 30 25" stroke="white" strokeWidth="1" strokeLinecap="round"/>
+        </svg>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="text-white space-y-6">
-            <div className="space-y-4">
+          <div className="text-white space-y-8">
+            <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                 Hello, I'm{' '}
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">Chanuka Gunasekara</span>
+                <span className="text-yellow-400 block">Chanuka Gunasekara</span>
                 <span className="block text-4xl lg:text-5xl">
                   Data Scientist & Developer
                 </span>
@@ -28,8 +37,8 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                Get Started
+              <button className="bg-yellow-400 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+                Contact Me
               </button>
               <button className="flex items-center space-x-2 text-white border-2 border-white/30 px-8 py-3 rounded-full hover:bg-white/10 transition-all duration-300">
                 <Play size={20} />
@@ -37,38 +46,27 @@ const Hero = () => {
               </button>
             </div>
 
-            {/* Stats */}
-            <div className="flex items-center space-x-8 pt-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                <div className="text-2xl font-bold text-yellow-300">3+</div>
-                <div className="text-sm text-white/80">Years Experience</div>
-              </div>
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full border-2 border-white"></div>
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full border-2 border-white"></div>
-                <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-blue-400 rounded-full border-2 border-white"></div>
-                <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-black">
-                  50+
-                </div>
-              </div>
+            <div className="flex items-center gap-4 p-3 bg-indigo-600 rounded-lg inline-block">
+              <span className="text-yellow-400">9000+</span>
+              <span>Lines of Code Written</span>
             </div>
           </div>
 
           {/* Profile Image */}
           <div className="relative">
-            <div className="relative z-10">
-              <div className="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full p-1">
-                <div className="w-full h-full bg-gray-200 rounded-full flex items-center justify-center">
-                  <div className="w-3/4 h-3/4 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full flex items-center justify-center text-gray-600 text-6xl font-bold">
-                    CJ
-                  </div>
+            <div className="relative z-10 flex justify-center">
+              <div className="w-80 h-80 bg-yellow-400 rounded-full overflow-hidden flex items-center justify-center relative">
+                <div className="w-full h-full bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 text-6xl font-bold">
+                  CJ
                 </div>
+                <svg className="absolute top-5 right-10" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <path d="M5 15C10 5 20 5 25 15" stroke="#4338ca" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
               </div>
             </div>
-            {/* Floating Elements */}
-            <div className="absolute top-10 -right-5 bg-white/20 backdrop-blur-sm rounded-xl p-4 text-white">
-              <div className="text-xl font-bold text-yellow-300">8+</div>
-              <div className="text-sm">Years Experience</div>
+            <div className="absolute -bottom-4 right-10 bg-white p-3 rounded-lg shadow-lg">
+              <div className="text-indigo-700 font-bold">Looking for</div>
+              <div className="text-gray-700">Data Science Internship</div>
             </div>
           </div>
         </div>
@@ -78,6 +76,8 @@ const Hero = () => {
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
         <ArrowDown size={24} />
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
