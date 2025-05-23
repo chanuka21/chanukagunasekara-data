@@ -60,7 +60,7 @@ const Projects = () => {
                   <span className="text-sm font-medium text-gray-500">{project.category}</span>
                   <button className="text-indigo-600 hover:text-indigo-700 font-medium text-sm flex items-center space-x-1">
                     <span>View Details</span>
-                    <ExternalLink size={14} className="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+                    <ExternalLink size={14} className="" />
                   </button>
                 </div>
               </div>
