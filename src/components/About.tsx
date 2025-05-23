@@ -1,40 +1,30 @@
-
 import { GraduationCap, Code, Brain, BarChart3 } from 'lucide-react';
 import { useContext } from 'react';
 import { ProjectsContext } from '../contexts/ProjectsContext';
-
 const About = () => {
-  const { projects } = useContext(ProjectsContext);
-  
+  const {
+    projects
+  } = useContext(ProjectsContext);
+
   // Calculate ML/AI project count
-  const mlProjectsCount = projects?.filter(project => 
-    project.category === 'Machine Learning' || project.category === 'AI/ML'
-  ).length || 0;
-  
+  const mlProjectsCount = projects?.filter(project => project.category === 'Machine Learning' || project.category === 'AI/ML').length || 0;
+
   // Total projects count
   const totalProjectsCount = projects?.length || 0;
-  
-  const skills = [
-    {
-      category: "Programming",
-      items: ["Python", "R", "SQL", "HTML/CSS"]
-    },
-    {
-      category: "Data Science",
-      items: ["Machine Learning", "Data Visualization", "Statistical Analysis", "Predictive Modeling"]
-    },
-    {
-      category: "Tools & Platforms",
-      items: ["Jupyter Notebook", "Google Colab", "VS Code", "Power BI", "Tableau", "R Studio"]
-    },
-    {
-      category: "Soft Skills",
-      items: ["Communication", "Problem Solving", "Project Management", "Teamwork", "Adaptability"]
-    }
-  ];
-
-  return (
-    <section id="about" className="py-20 bg-gray-50">
+  const skills = [{
+    category: "Programming",
+    items: ["Python", "R", "SQL", "HTML/CSS"]
+  }, {
+    category: "Data Science",
+    items: ["Machine Learning", "Data Visualization", "Statistical Analysis", "Predictive Modeling"]
+  }, {
+    category: "Tools & Platforms",
+    items: ["Jupyter Notebook", "Google Colab", "VS Code", "Power BI", "Tableau", "R Studio"]
+  }, {
+    category: "Soft Skills",
+    items: ["Communication", "Problem Solving", "Project Management", "Teamwork", "Adaptability"]
+  }];
+  return <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
@@ -61,12 +51,7 @@ const About = () => {
                 </div>
               </div>
 
-              <p className="text-gray-700 leading-relaxed">
-                I'm passionate about transforming complex data into actionable insights and 
-                building innovative solutions that make a real impact. Currently seeking 
-                internship opportunities to apply my skills in real-world scenarios and 
-                contribute to data-driven decision making.
-              </p>
+              <p className="text-gray-700 leading-relaxed">I'm specialize about transforming complex data into actionable insights and building innovative solutions that make a real impact. Currently seeking internship opportunities to apply my skills in real-world scenarios and contribute to data-driven decision making.</p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -87,26 +72,17 @@ const About = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-gray-800 mb-8">Skills & Expertise</h3>
             
-            {skills.map((skillGroup, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+            {skills.map((skillGroup, index) => <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
                 <h4 className="text-lg font-semibold text-gray-800 mb-4">{skillGroup.category}</h4>
                 <div className="flex flex-wrap gap-2">
-                  {skillGroup.items.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="bg-gradient-to-r from-purple-100 to-orange-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium"
-                    >
+                  {skillGroup.items.map((skill, skillIndex) => <span key={skillIndex} className="bg-gradient-to-r from-purple-100 to-orange-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
                       {skill}
-                    </span>
-                  ))}
+                    </span>)}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
