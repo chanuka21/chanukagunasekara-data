@@ -1,7 +1,19 @@
 
 import { GraduationCap, Code, Brain, BarChart3 } from 'lucide-react';
+import { useContext } from 'react';
+import { ProjectsContext } from '../contexts/ProjectsContext';
 
 const About = () => {
+  const { projects } = useContext(ProjectsContext);
+  
+  // Calculate ML/AI project count
+  const mlProjectsCount = projects?.filter(project => 
+    project.category === 'Machine Learning' || project.category === 'AI/ML'
+  ).length || 0;
+  
+  // Total projects count
+  const totalProjectsCount = projects?.length || 0;
+  
   const skills = [
     {
       category: "Programming",
@@ -60,12 +72,12 @@ const About = () => {
             <div className="grid grid-cols-3 gap-4">
               <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-white text-center">
                 <Code size={32} className="mx-auto mb-2" />
-                <div className="text-2xl font-bold">15+</div>
+                <div className="text-2xl font-bold">{totalProjectsCount}+</div>
                 <div className="text-sm opacity-90">Projects Completed</div>
               </div>
               <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-6 text-white text-center">
                 <Brain size={32} className="mx-auto mb-2" />
-                <div className="text-2xl font-bold">5+</div>
+                <div className="text-2xl font-bold">{mlProjectsCount}+</div>
                 <div className="text-sm opacity-90">ML Models Built</div>
               </div>
               <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl p-6 text-white text-center">

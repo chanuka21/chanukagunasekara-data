@@ -1,7 +1,14 @@
 
-import { ArrowDown, Play } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen bg-indigo-700 flex items-center relative overflow-hidden">
       {/* Decorative elements */}
@@ -37,18 +44,12 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-yellow-400 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+              <button 
+                onClick={scrollToContact}
+                className="bg-yellow-400 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105"
+              >
                 Contact Me
               </button>
-              <button className="flex items-center space-x-2 text-white border-2 border-white/30 px-8 py-3 rounded-full hover:bg-white/10 transition-all duration-300">
-                <Play size={20} />
-                <span>Watch Intro</span>
-              </button>
-            </div>
-
-            <div className="flex items-center gap-4 p-3 bg-indigo-600 rounded-lg inline-block">
-              <span className="text-yellow-400">9000+</span>
-              <span>Lines of Code Written</span>
             </div>
           </div>
 

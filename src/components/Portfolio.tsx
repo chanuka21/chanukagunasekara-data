@@ -1,48 +1,12 @@
 
 import { ExternalLink, Github } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { ProjectsContext } from '../contexts/ProjectsContext';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
+  const { projects } = useContext(ProjectsContext);
   
-  const projects = [
-    {
-      title: "Adidas Shoes Sales Analysis",
-      description: "Interactive sales dashboard using Excel and Power BI for comprehensive sales insights and trend analysis.",
-      tools: ["Excel", "Power BI", "Data Visualization"],
-      category: "Data Analysis",
-      image: "bg-indigo-500"
-    },
-    {
-      title: "BlinkIt Grocery Sales Analysis",
-      description: "Comprehensive sales and customer insight dashboards with detailed market analysis and performance metrics.",
-      tools: ["Power BI", "Data Analysis", "Dashboard Design"],
-      category: "Business Intelligence",
-      image: "bg-indigo-600"
-    },
-    {
-      title: "Pizza Sales Analysis Report",
-      description: "In-depth analysis focusing on sales trends, best-selling products, and customer behavior patterns.",
-      tools: ["Excel", "Statistical Analysis", "Data Visualization"],
-      category: "Market Research",
-      image: "bg-indigo-700"
-    },
-    {
-      title: "Laptop Price Prediction Model",
-      description: "Machine learning model using Python and scikit-learn Random Forest regression with high predictive accuracy.",
-      tools: ["Python", "Scikit-learn", "Random Forest", "Data Science"],
-      category: "Machine Learning",
-      image: "bg-indigo-800"
-    },
-    {
-      title: "Movie Recommender System",
-      description: "Intelligent recommendation system utilizing NLP, machine learning, and cosine similarity for personalized suggestions.",
-      tools: ["Python", "NLP", "Machine Learning", "Cosine Similarity"],
-      category: "AI/ML",
-      image: "bg-indigo-900"
-    }
-  ];
-
   const filters = ['All', 'Data Analysis', 'Business Intelligence', 'Machine Learning', 'AI/ML'];
   
   const filteredProjects = activeFilter === 'All' 

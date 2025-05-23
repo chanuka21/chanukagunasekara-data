@@ -7,19 +7,22 @@ import SkillsExpertise from '../components/Services';
 import Certificates from '../components/Certificates';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import { ProjectsProvider } from '../contexts/ProjectsContext';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <Hero />
-      <About />
-      <Projects />
-      <SkillsExpertise />
-      <Certificates />
-      <Contact />
-      <Footer />
-    </div>
+    <ProjectsProvider>
+      <div className="min-h-screen">
+        <Header />
+        <Hero />
+        <About />
+        <Projects />
+        <SkillsExpertise />
+        <Certificates />
+        <Contact />
+        <Footer />
+      </div>
+    </ProjectsProvider>
   );
 };
 
