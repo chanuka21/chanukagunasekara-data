@@ -1,16 +1,14 @@
-
 import { ArrowDown } from 'lucide-react';
-
 const Hero = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="min-h-screen bg-indigo-700 flex items-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen bg-indigo-700 flex items-center relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-12 h-12 bg-yellow-400 rounded-full"></div>
@@ -18,10 +16,10 @@ const Hero = () => {
         <div className="absolute top-1/2 right-40 w-16 h-16 bg-indigo-500 rounded-full opacity-30"></div>
         <div className="absolute bottom-40 left-1/3 w-12 h-12 bg-white/10 rounded-full"></div>
         <svg className="absolute top-20 right-20" width="40" height="40" viewBox="0 0 40 40" fill="none">
-          <path d="M10 25C15 15 25 15 30 25" stroke="white" strokeWidth="1" strokeLinecap="round"/>
+          <path d="M10 25C15 15 25 15 30 25" stroke="white" strokeWidth="1" strokeLinecap="round" />
         </svg>
         <svg className="absolute bottom-40 right-1/4" width="40" height="40" viewBox="0 0 40 40" fill="none">
-          <path d="M10 25C15 15 25 15 30 25" stroke="white" strokeWidth="1" strokeLinecap="round"/>
+          <path d="M10 25C15 15 25 15 30 25" stroke="white" strokeWidth="1" strokeLinecap="round" />
         </svg>
       </div>
 
@@ -33,9 +31,7 @@ const Hero = () => {
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                 Hello, I'm{' '}
                 <span className="text-yellow-400 block">Chanuka Gunasekara</span>
-                <span className="block text-4xl lg:text-5xl">
-                  Data Scientist & Developer
-                </span>
+                <span className="block text-4xl lg:text-5xl">Data Analyst &amp; Developer</span>
               </h1>
               <p className="text-lg text-white/90 max-w-lg">
                 Passionate final-year undergraduate specializing in Statistics and Operational Research. 
@@ -44,10 +40,7 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={scrollToContact}
-                className="bg-yellow-400 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105"
-              >
+              <button onClick={scrollToContact} className="bg-yellow-400 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
                 Contact Me
               </button>
             </div>
@@ -61,7 +54,7 @@ const Hero = () => {
                   CJ
                 </div>
                 <svg className="absolute top-5 right-10" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                  <path d="M5 15C10 5 20 5 25 15" stroke="#4338ca" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M5 15C10 5 20 5 25 15" stroke="#4338ca" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
             </div>
@@ -77,8 +70,6 @@ const Hero = () => {
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
         <ArrowDown size={24} />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
