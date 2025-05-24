@@ -8,6 +8,8 @@ export interface Project {
   category: string;
   image: string;
   fullDescription?: string;
+  purpose?: string;
+  role?: string;
   challenges?: string;
   outcomes?: string;
   projectUrl?: string;
@@ -23,38 +25,38 @@ const defaultProjects = [
   {
     title: "Adidas Shoes Sales Analysis",
     description: "Interactive sales dashboard using Excel and Power BI for comprehensive sales insights and trend analysis.",
-    tools: ["Excel", "Power BI", "Data Visualization"],
+    tools: ["Excel", "Power BI", "Data Visualization", "DAX", "Power Query"],
     category: "Data Analysis",
     image: "bg-indigo-500",
-    fullDescription: "This project involved analyzing Adidas shoe sales data across multiple regions and product categories. I developed interactive dashboards to visualize sales trends, regional performance, and product popularity. The analysis revealed key insights that helped inform inventory management and marketing strategies.",
+    purpose: "This project aimed to analyze Adidas shoe sales data to derive actionable insights into sales performance across different regions, states, products, and retailers. The goal was to visualize key metrics like total sales, operating profit, and units sold, and identify trends to support strategic business decisions.",
+    role: "In this project, I was responsible for the end-to-end development of the sales analysis report. This involved extracting and transforming raw sales data into a suitable format, building a robust data model within Power BI, designing and implementing various interactive visualizations, including sales trends over time, sales by state (using a map), sales by region (using a donut chart), sales by product, and sales by retailer. I also calculated key performance indicators (KPIs) such as Total Sales, Operating Profit, Units Sold, Price per Unit, and Average Operating Margin, ensuring the accuracy and clarity of the insights presented in the dashboard.",
     challenges: "Working with fragmented sales data across multiple regions required careful data cleaning and normalization to ensure accurate analysis.",
-    outcomes: "Identified top-performing products and underperforming regions, leading to a 15% increase in targeted sales efforts and improved inventory management.",
-    projectUrl: "https://example.com/adidas-dashboard",
-    githubUrl: "https://github.com/cjgunasekera/adidas-sales"
+    outcomes: "Created an interactive dashboard showcasing key metrics including $900M in total sales, $332M in operating profit, 2M units sold, $45 price per unit, and 42% average operating margin. The dashboard provided actionable insights for inventory management and marketing strategies.",
+    githubUrl: "https://github.com/chanuka21/Adidas-shoes-sales-in-America_2020_2021.git"
   },
   {
     title: "BlinkIt Grocery Sales Analysis",
     description: "Comprehensive sales and customer insight dashboards with detailed market analysis and performance metrics.",
-    tools: ["Power BI", "Data Analysis", "Dashboard Design"],
+    tools: ["Power BI", "Excel", "Data Analysis", "Dashboard Design", "Power Query", "DAX"],
     category: "Business Intelligence",
     image: "bg-indigo-600",
-    fullDescription: "Developed a comprehensive business intelligence solution for BlinkIt Grocery analyzing sales patterns, customer behavior, and market trends. The solution included interactive dashboards for real-time monitoring of key performance indicators and automated reporting systems.",
+    purpose: "This project was developed to analyze sales data from BlinkIt grocery outlets to gain insights into various aspects of their operations. The primary goals included understanding total sales performance, average sales, customer ratings, and the number of items sold. It also aimed to visualize sales trends across different outlet establishment years, outlet sizes, outlet locations, and item types, providing valuable insights for business optimization.",
+    role: "In this project, I was responsible for the complete development cycle of the grocery sales analysis report. My key responsibilities included importing and cleaning the raw sales data to ensure accuracy and consistency, building a comprehensive data model in Power BI to facilitate robust analysis, designing and implementing interactive visualizations, calculating and displaying key metrics including Total Sales, Average Sales, Number of Items, and Average Rating, and developing filtering capabilities to allow for dynamic exploration of the data.",
     challenges: "Integrating data from multiple sources including POS systems, inventory management, and customer databases required complex data modeling.",
-    outcomes: "Provided actionable insights that led to a 20% improvement in stock management efficiency and a 12% increase in customer retention through targeted promotions.",
-    projectUrl: "https://example.com/blinkit-dashboard",
-    githubUrl: "https://github.com/cjgunasekera/blinkit-analysis"
+    outcomes: "Developed a comprehensive dashboard that revealed $1.2M in total sales, 141 in average sales, 8,523 total items, and an average customer rating of 3.9. The analysis provided actionable insights that led to improvements in stock management efficiency and increased customer retention through targeted promotions.",
+    githubUrl: "https://github.com/chanuka21/BlinkIT_Grocery_Sales_Data.git"
   },
   {
     title: "Pizza Sales Analysis Report",
     description: "In-depth analysis focusing on sales trends, best-selling products, and customer behavior patterns.",
-    tools: ["Excel", "Statistical Analysis", "Data Visualization"],
-    category: "Market Research",
+    tools: ["Excel", "Power BI", "Statistical Analysis", "Data Visualization", "DAX"],
+    category: "Data Analysis",
     image: "bg-indigo-700",
-    fullDescription: "Conducted detailed market research on pizza sales patterns across different locations and customer segments. The analysis included factors such as peak ordering times, popular toppings, price sensitivity, and promotional impact on sales.",
+    purpose: "This project was developed to analyze pizza sales data, providing a comprehensive overview of sales performance. The main objectives were to identify popular pizza categories and sizes, understand daily and monthly sales trends, and highlight best-selling and worst-selling pizzas by revenue, quantity, and total orders. This analysis aims to support business decisions related to menu optimization, inventory management, and marketing strategies.",
+    role: "In this project, I was responsible for the end-to-end development of the Pizza Sales Report. My key responsibilities included importing and cleaning the raw pizza sales data, developing a robust data model within Power BI to connect various sales attributes, designing and implementing interactive visualizations to display key metrics such as Total Revenue, Average Order Value, Total Pizza Sold, Total Orders, and Average Pizza Per Order, creating charts to show daily and monthly trends for total orders, and identifying and visualizing the top and bottom 5 pizzas by revenue, quantity, and total orders.",
     challenges: "Analyzing seasonal variations and special event impacts required developing custom analytical models to isolate factors affecting sales.",
-    outcomes: "Identified optimal pricing strategies and menu combinations that increased average order value by 8% when implemented.",
-    projectUrl: "https://example.com/pizza-analysis",
-    githubUrl: "https://github.com/cjgunasekera/pizza-sales"
+    outcomes: "Created a comprehensive dashboard showcasing key metrics including $817.86K in total revenue, $38.31 average order value, 49,574 total pizzas sold, 21,350 total orders, and 2.32 average pizzas per order. The analysis identified optimal pricing strategies and menu combinations that increased average order value.",
+    githubUrl: "https://github.com/chanuka21/Pizza_Sales_Analysis.git"
   },
   {
     title: "Laptop Price Prediction Model",
@@ -65,7 +67,6 @@ const defaultProjects = [
     fullDescription: "Developed a machine learning model to predict laptop prices based on specifications like processor type, RAM, storage, screen size, and brand. Used Random Forest Regression algorithm to achieve high prediction accuracy across different price ranges.",
     challenges: "Feature engineering from unstructured product descriptions required NLP techniques to extract and standardize technical specifications.",
     outcomes: "Achieved 91% prediction accuracy on test data, creating a valuable tool for both consumers and retailers to evaluate fair market prices.",
-    projectUrl: "https://example.com/laptop-prediction",
     githubUrl: "https://github.com/cjgunasekera/laptop-price-prediction"
   },
   {
@@ -77,7 +78,6 @@ const defaultProjects = [
     fullDescription: "Built a content-based movie recommendation system that analyzes movie descriptions, genres, actors, and directors to suggest similar films. The system uses natural language processing to extract meaningful features from movie metadata and employs cosine similarity to find movies with similar characteristics.",
     challenges: "Creating effective feature vectors from text data required balancing between specificity and generalization to avoid both overly narrow and irrelevant recommendations.",
     outcomes: "The system provides highly relevant movie suggestions based on content similarity rather than just popularity, enhancing user discovery of lesser-known but well-matched films.",
-    projectUrl: "https://example.com/movie-recommender",
     githubUrl: "https://github.com/cjgunasekera/movie-recommender"
   }
 ];

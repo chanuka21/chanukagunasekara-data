@@ -54,13 +54,31 @@ const ProjectDetail = ({ project, open, onOpenChange }: ProjectDetailProps) => {
         
         {/* Project Description */}
         <div className="space-y-6">
-          <div>
-            <h3 className="font-semibold text-lg mb-2">Overview</h3>
-            <p className="text-gray-700 leading-relaxed">
-              {project.fullDescription || project.description}
-            </p>
-          </div>
+          {project.purpose && (
+            <div>
+              <h3 className="font-semibold text-lg mb-2">Purpose</h3>
+              <p className="text-gray-700 leading-relaxed">
+                {project.purpose}
+              </p>
+            </div>
+          )}
           
+          {(project.fullDescription || project.description) && !project.purpose && (
+            <div>
+              <h3 className="font-semibold text-lg mb-2">Overview</h3>
+              <p className="text-gray-700 leading-relaxed">
+                {project.fullDescription || project.description}
+              </p>
+            </div>
+          )}
+          
+          {project.role && (
+            <div>
+              <h3 className="font-semibold text-lg mb-2">My Role</h3>
+              <p className="text-gray-700 leading-relaxed">{project.role}</p>
+            </div>
+          )}
+
           {project.challenges && (
             <div>
               <h3 className="font-semibold text-lg mb-2">Challenges</h3>
@@ -78,18 +96,6 @@ const ProjectDetail = ({ project, open, onOpenChange }: ProjectDetailProps) => {
         
         {/* Project Links */}
         <div className="flex flex-wrap gap-4 mt-6 pt-6 border-t border-gray-200">
-          {project.projectUrl && (
-            <a 
-              href={project.projectUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md transition-colors"
-            >
-              <ExternalLink size={16} />
-              <span>View Live Project</span>
-            </a>
-          )}
-          
           {project.githubUrl && (
             <a 
               href={project.githubUrl}

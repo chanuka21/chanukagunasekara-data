@@ -29,13 +29,20 @@ const Projects = () => {
 
         {/* Filter buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {filters.map(filter => <button key={filter} onClick={() => setActiveFilter(filter)} className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${activeFilter === filter ? 'bg-indigo-700 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
+          {filters.map(filter => <button 
+              key={filter} 
+              onClick={() => setActiveFilter(filter)} 
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${activeFilter === filter ? 'bg-indigo-700 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            >
               {filter}
             </button>)}
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+          {filteredProjects.map((project, index) => <div 
+              key={index} 
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
+            >
               {/* Project Image/Preview */}
               <div className={`h-48 ${project.image} flex items-center justify-center relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-indigo-500 opacity-30"></div>
@@ -44,16 +51,6 @@ const Projects = () => {
                   <div className="text-sm opacity-90">{project.category}</div>
                 </div>
                 <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4 z-20">
-                  {project.projectUrl && (
-                    <a 
-                      href={project.projectUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-colors"
-                    >
-                      <ExternalLink className="text-white" size={20} />
-                    </a>
-                  )}
                   {project.githubUrl && (
                     <a 
                       href={project.githubUrl} 
@@ -75,7 +72,10 @@ const Projects = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tools.map((tool, toolIndex) => <span key={toolIndex} className="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium">
+                  {project.tools.map((tool, toolIndex) => <span 
+                      key={toolIndex} 
+                      className="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"
+                    >
                       {tool}
                     </span>)}
                 </div>
