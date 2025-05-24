@@ -4,60 +4,25 @@ import { Award, ExternalLink } from 'lucide-react';
 const Certificates = () => {
   const certificates = [
     {
-      title: "Data Science Professional Certificate",
-      issuer: "IBM",
+      title: "Preparing Data for Analysis with Microsoft Excel",
+      issuer: "Coursera",
       date: "2023",
-      description: "Comprehensive certification covering data analysis, visualization, machine learning, and Python programming.",
-      link: "https://www.yourlink.com/ibm-certificate"
+      description: "Skills in Excel data preparation, cleaning, and organization techniques for effective analysis.",
+      link: "https://coursera.org/share/204b1b452b0b92357aceef24f205fd14"
     },
     {
-      title: "Machine Learning Specialization",
-      issuer: "Stanford University & Coursera",
+      title: "Harnessing the Power of Data with Power BI",
+      issuer: "Coursera",
       date: "2023",
-      description: "Advanced machine learning algorithms, modeling techniques, and practical applications.",
-      link: "https://www.yourlink.com/stanford-certificate"
+      description: "Advanced dashboard creation, data modeling, and visualization techniques using Microsoft Power BI.",
+      link: "https://coursera.org/share/72c0cad1981fb203bf25cf7177e86d4c"
     },
     {
-      title: "Business Intelligence Analyst",
-      issuer: "DataCamp",
-      date: "2022",
-      description: "Business intelligence fundamentals, dashboard design, and data storytelling techniques.",
-      link: "https://www.yourlink.com/datacamp-certificate"
-    },
-    {
-      title: "SQL Advanced Certification",
-      issuer: "HackerRank",
-      date: "2022",
-      description: "Advanced database querying, optimization, and management skills.",
-      link: "https://www.yourlink.com/hackerrank-certificate"
-    },
-    {
-      title: "Python for Data Science",
-      issuer: "Udemy",
-      date: "2022",
-      description: "Comprehensive training in Python programming for data manipulation, analysis, and visualization.",
-      link: "https://www.yourlink.com/python-certificate"
-    },
-    {
-      title: "Tableau Desktop Specialist",
-      issuer: "Tableau",
-      date: "2021",
-      description: "Skills in creating interactive dashboards and advanced data visualizations using Tableau.",
-      link: "https://www.yourlink.com/tableau-certificate"
-    },
-    {
-      title: "Excel Advanced Analytics",
-      issuer: "Microsoft",
-      date: "2021",
-      description: "Advanced Excel skills including PivotTables, Power Query, and data modeling for analysis.",
-      link: "https://www.yourlink.com/excel-certificate"
-    },
-    {
-      title: "Statistics for Data Science",
-      issuer: "edX",
-      date: "2021",
-      description: "Statistical methods, hypothesis testing, and probability theory for data analysis.",
-      link: "https://www.yourlink.com/statistics-certificate"
+      title: "Extract, Transform and Load Data in Power BI",
+      issuer: "Coursera",
+      date: "2023",
+      description: "Comprehensive training in ETL processes using Power BI's Power Query for data transformation and loading.",
+      link: "https://coursera.org/share/3aefe537a962f609e83867c09184a4ed"
     }
   ];
 

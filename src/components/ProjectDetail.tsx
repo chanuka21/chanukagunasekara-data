@@ -29,11 +29,24 @@ const ProjectDetail = ({ project, open, onOpenChange }: ProjectDetailProps) => {
           </div>
         </DialogHeader>
         
-        {/* Project Banner */}
-        <div className={`h-48 ${project.image} rounded-lg flex items-center justify-center relative overflow-hidden mb-6`}>
-          <div className="absolute inset-0 bg-indigo-500 opacity-30"></div>
-          <div className="text-white text-center z-10 text-3xl font-bold">{project.title}</div>
-        </div>
+        {/* Project Image */}
+        {project.fullImage && (
+          <div className="mb-6 rounded-lg overflow-hidden">
+            <img 
+              src={project.fullImage} 
+              alt={project.title} 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
+        
+        {/* Project Banner (fallback if no image) */}
+        {!project.fullImage && (
+          <div className={`h-48 ${project.image} rounded-lg flex items-center justify-center relative overflow-hidden mb-6`}>
+            <div className="absolute inset-0 bg-indigo-500 opacity-30"></div>
+            <div className="text-white text-center z-10 text-3xl font-bold">{project.title}</div>
+          </div>
+        )}
         
         {/* Project Category & Tools */}
         <div className="mb-6">
