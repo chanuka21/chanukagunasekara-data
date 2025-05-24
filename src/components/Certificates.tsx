@@ -8,28 +8,56 @@ const Certificates = () => {
       issuer: "IBM",
       date: "2023",
       description: "Comprehensive certification covering data analysis, visualization, machine learning, and Python programming.",
-      link: "#"
+      link: "https://www.yourlink.com/ibm-certificate"
     },
     {
       title: "Machine Learning Specialization",
       issuer: "Stanford University & Coursera",
       date: "2023",
       description: "Advanced machine learning algorithms, modeling techniques, and practical applications.",
-      link: "#"
+      link: "https://www.yourlink.com/stanford-certificate"
     },
     {
       title: "Business Intelligence Analyst",
       issuer: "DataCamp",
       date: "2022",
       description: "Business intelligence fundamentals, dashboard design, and data storytelling techniques.",
-      link: "#"
+      link: "https://www.yourlink.com/datacamp-certificate"
     },
     {
       title: "SQL Advanced Certification",
       issuer: "HackerRank",
       date: "2022",
       description: "Advanced database querying, optimization, and management skills.",
-      link: "#"
+      link: "https://www.yourlink.com/hackerrank-certificate"
+    },
+    {
+      title: "Python for Data Science",
+      issuer: "Udemy",
+      date: "2022",
+      description: "Comprehensive training in Python programming for data manipulation, analysis, and visualization.",
+      link: "https://www.yourlink.com/python-certificate"
+    },
+    {
+      title: "Tableau Desktop Specialist",
+      issuer: "Tableau",
+      date: "2021",
+      description: "Skills in creating interactive dashboards and advanced data visualizations using Tableau.",
+      link: "https://www.yourlink.com/tableau-certificate"
+    },
+    {
+      title: "Excel Advanced Analytics",
+      issuer: "Microsoft",
+      date: "2021",
+      description: "Advanced Excel skills including PivotTables, Power Query, and data modeling for analysis.",
+      link: "https://www.yourlink.com/excel-certificate"
+    },
+    {
+      title: "Statistics for Data Science",
+      issuer: "edX",
+      date: "2021",
+      description: "Statistical methods, hypothesis testing, and probability theory for data analysis.",
+      link: "https://www.yourlink.com/statistics-certificate"
     }
   ];
 

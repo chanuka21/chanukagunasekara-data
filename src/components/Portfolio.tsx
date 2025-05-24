@@ -1,13 +1,23 @@
+
 import { ExternalLink, Github } from 'lucide-react';
 import { useState, useContext } from 'react';
 import { ProjectsContext } from '../contexts/ProjectsContext';
+import ProjectDetail from './ProjectDetail';
+
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  const {
-    projects
-  } = useContext(ProjectsContext);
+  const { projects } = useContext(ProjectsContext);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isDetailOpen, setIsDetailOpen] = useState(false);
+
   const filters = ['All', 'Data Analysis', 'Business Intelligence', 'Machine Learning', 'AI/ML'];
   const filteredProjects = activeFilter === 'All' ? projects : projects.filter(project => project.category === activeFilter);
+
+  const handleViewDetails = (project) => {
+    setSelectedProject(project);
+    setIsDetailOpen(true);
+  };
+
   return <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
@@ -34,12 +44,26 @@ const Projects = () => {
                   <div className="text-sm opacity-90">{project.category}</div>
                 </div>
                 <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4 z-20">
-                  <button className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-colors">
-                    <ExternalLink className="text-white" size={20} />
-                  </button>
-                  <button className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-colors">
-                    <Github className="text-white" size={20} />
-                  </button>
+                  {project.projectUrl && (
+                    <a 
+                      href={project.projectUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-colors"
+                    >
+                      <ExternalLink className="text-white" size={20} />
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a 
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-colors"
+                    >
+                      <Github className="text-white" size={20} />
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -58,7 +82,10 @@ const Projects = () => {
 
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-gray-500">{project.category}</span>
-                  <button className="text-indigo-600 hover:text-indigo-700 font-medium text-sm flex items-center space-x-1">
+                  <button 
+                    onClick={() => handleViewDetails(project)} 
+                    className="text-indigo-600 hover:text-indigo-700 font-medium text-sm flex items-center space-x-1"
+                  >
                     <span>View Details</span>
                     <ExternalLink size={14} className="" />
                   </button>
@@ -66,6 +93,15 @@ const Projects = () => {
               </div>
             </div>)}
         </div>
+
+        {/* Project Detail Modal */}
+        {selectedProject && (
+          <ProjectDetail 
+            project={selectedProject} 
+            open={isDetailOpen} 
+            onOpenChange={setIsDetailOpen} 
+          />
+        )}
 
         {/* View All Projects Button */}
         <div className="text-center mt-12">
@@ -76,4 +112,5 @@ const Projects = () => {
       </div>
     </section>;
 };
+
 export default Projects;
