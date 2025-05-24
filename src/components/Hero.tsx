@@ -1,4 +1,6 @@
+
 import { ArrowDown } from 'lucide-react';
+
 const Hero = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -8,6 +10,7 @@ const Hero = () => {
       });
     }
   };
+  
   return <section id="home" className="min-h-screen bg-indigo-700 flex items-center relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0">
@@ -50,9 +53,11 @@ const Hero = () => {
           <div className="relative">
             <div className="relative z-10 flex justify-center">
               <div className="w-80 h-80 bg-yellow-400 rounded-full overflow-hidden flex items-center justify-center relative">
-                <div className="w-full h-full bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 text-6xl font-bold">
-                  CJ
-                </div>
+                <img 
+                  src="https://i.postimg.cc/8zWDJMj9/photo-2025-05-24-00-55-38.jpg" 
+                  alt="Chanuka Gunasekara" 
+                  className="w-full h-full object-cover"
+                />
                 <svg className="absolute top-5 right-10" width="30" height="30" viewBox="0 0 30 30" fill="none">
                   <path d="M5 15C10 5 20 5 25 15" stroke="#4338ca" strokeWidth="2" strokeLinecap="round" />
                 </svg>
@@ -72,4 +77,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
