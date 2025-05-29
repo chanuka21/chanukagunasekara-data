@@ -54,7 +54,7 @@ const Hero = () => {
             <div className="relative z-10 flex justify-center">
               <div className="w-80 h-80 bg-yellow-400 rounded-full overflow-hidden flex items-center justify-center relative">
                 <img 
-                  src="https://i.postimg.cc/8zWDJMj9/photo-2025-05-24-00-55-38.jpg" 
+                  src="https://i.postimg.cc/4yRTtcR5/photo-2025-05-24-00-55-381.jpg" 
                   alt="Chanuka Gunasekara" 
                   className="w-full h-full object-cover"
                 />
