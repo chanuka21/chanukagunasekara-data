@@ -1,4 +1,3 @@
-
 import { createContext, ReactNode, useState } from 'react';
 
 export interface Project {
@@ -77,12 +76,13 @@ const defaultProjects = [
   },
   {
     title: "Movie Recommender System",
-    description: "Intelligent recommendation system utilizing NLP, machine learning, and cosine similarity for personalized suggestions.",
-    tools: ["Python", "NLP", "Machine Learning", "Cosine Similarity"],
+    description: "Intelligent recommendation system utilizing NLP, machine learning, and cosine similarity for personalized movie suggestions based on content-based filtering techniques.",
+    tools: ["Python", "Pandas", "NumPy", "NLTK", "Scikit-learn", "CountVectorizer", "Cosine Similarity", "Pickle"],
     category: "AI/ML",
     image: "bg-indigo-900",
     fullImage: "https://i.postimg.cc/Njh1Wf7H/Screenshot-129.png",
-    fullDescription: "Built a content-based movie recommendation system that analyzes movie descriptions, genres, actors, and directors to suggest similar films. The system uses natural language processing to extract meaningful features from movie metadata and employs cosine similarity to find movies with similar characteristics.",
+    purpose: "The primary purpose of this project was to develop a movie recommendation system that suggests similar movies to a user based on their input of a movie title. The system aims to enhance user experience by providing personalized movie suggestions, leveraging content-based filtering techniques.",
+    role: "In this project, I was responsible for the end-to-end development of the movie recommender system. My key responsibilities included Data Acquisition and Merging: Loading and combining movie details and credits datasets from TMDB to create a unified dataset. Data Preprocessing: Cleaning and transforming raw text data, including parsing JSON-like strings for genres, keywords, and cast, and applying stemming to create a consistent set of tags for each movie. Feature Extraction: Converting the processed textual movie features into a numerical format using CountVectorizer suitable for machine learning algorithms. Similarity Calculation: Computing the cosine similarity between all movie pairs based on their vectorized features to quantify their resemblance. Recommendation Logic Development: Implementing a function to take a movie name as input and return the top similar movies based on the calculated similarity scores. Model Saving: Saving the processed data and the similarity matrix for efficient loading and prediction in a deployed environment. Web Integration (implied): Setting up the user interface to allow for interactive movie recommendations.",
     challenges: "Creating effective feature vectors from text data required balancing between specificity and generalization to avoid both overly narrow and irrelevant recommendations.",
     outcomes: "The system provides highly relevant movie suggestions based on content similarity rather than just popularity, enhancing user discovery of lesser-known but well-matched films.",
     githubUrl: "https://github.com/cjgunasekera/movie-recommender"
