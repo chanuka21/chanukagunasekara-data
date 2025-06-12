@@ -6,21 +6,10 @@ const Footer = () => {
     <footer className="bg-indigo-900 text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <div className="text-2xl font-bold text-yellow-400 mb-4">
-              Chanuka Jayampath Gunasekara
-            </div>
-            <p className="text-indigo-100 leading-relaxed max-w-md">
-              Data Scientist & Developer passionate about transforming data into insights 
-              and building innovative solutions through AI and full-stack development.
-            </p>
-          </div>
-
           {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-yellow-400">Quick Links</h4>
-            <ul className="space-y-2">
+          <div className="md:col-span-3">
+            <h4 className="text-lg font-semibold mb-4 text-yellow-400 text-center">Quick Links</h4>
+            <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2">
               <li><a href="#home" className="text-indigo-100 hover:text-white transition-colors">Home</a></li>
               <li><a href="#about" className="text-indigo-100 hover:text-white transition-colors">About</a></li>
               <li><a href="#projects" className="text-indigo-100 hover:text-white transition-colors">Projects</a></li>
@@ -33,7 +22,7 @@ const Footer = () => {
 
         <div className="border-t border-indigo-800 mt-12 pt-8 text-center">
           <div className="flex items-center justify-center space-x-2 text-indigo-100">
-            <span>© 2024 Chanuka Jayampath Gunasekara. Made with</span>
+            <span>© 2024 Made with</span>
             <Heart size={16} className="text-red-500 fill-current" />
             <span>All rights reserved.</span>
           </div>

@@ -1,6 +1,8 @@
+
 import { GraduationCap, Code, Brain, BarChart3 } from 'lucide-react';
 import { useContext } from 'react';
 import { ProjectsContext } from '../contexts/ProjectsContext';
+
 const About = () => {
   const {
     projects
@@ -46,12 +48,12 @@ const About = () => {
                   <p className="text-gray-600">
                     Final-year undergraduate at University of Peradeniya, pursuing a degree in 
                     Statistics and Operational Research. Focused on data science, AI research, 
-                    and full-stack development.
+                    and data engineering.
                   </p>
                 </div>
               </div>
 
-              <p className="text-gray-700 leading-relaxed">I'm specialize about transforming complex data into actionable insights and building innovative solutions that make a real impact. Currently seeking internship opportunities to apply my skills in real-world scenarios and contribute to data-driven decision making.</p>
+              <p className="text-gray-700 leading-relaxed">I specialize in transforming complex data into actionable insights and building innovative data engineering solutions that make a real impact. Currently seeking internship opportunities to apply my skills in real-world scenarios and contribute to data-driven decision making.</p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -85,4 +87,5 @@ const About = () => {
       </div>
     </section>;
 };
+
 export default About;

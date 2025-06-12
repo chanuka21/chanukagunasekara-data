@@ -97,7 +97,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to collaborate? Let's discuss your next data science project or development needs.
+            Ready to collaborate? Let's discuss your next data science project or data engineering needs.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ const Contact = () => {
               <p className="text-gray-600 leading-relaxed mb-8">
                 I'm always excited to discuss new opportunities, collaborate on interesting projects, 
                 or help solve complex data challenges. Whether you need data analysis, machine learning 
-                solutions, or full-stack development, I'm here to help bring your ideas to life.
+                solutions, or data engineering infrastructure, I'm here to help bring your ideas to life.
               </p>
             </div>
 

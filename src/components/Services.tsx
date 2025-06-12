@@ -29,8 +29,8 @@ const SkillsExpertise = () => {
     },
     {
       icon: <Code className="text-indigo-600" size={32} />,
-      title: "Full-Stack Development",
-      description: "End-to-end web application development with modern technologies and data integration capabilities.",
+      title: "Data Engineering Solutions",
+      description: "Design and implement robust data pipelines, ETL processes, and scalable data infrastructure to support analytics.",
       gradient: "bg-indigo-100"
     },
     {
@@ -81,7 +81,7 @@ const SkillsExpertise = () => {
           </div>
           <h3 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
           <p className="text-lg mb-6 opacity-90">
-            Let's collaborate to transform your data into actionable insights and build innovative solutions.
+            Let's collaborate to transform your data into actionable insights and build innovative engineering solutions.
           </p>
           <button className="bg-yellow-400 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-300">
             Get Started Today

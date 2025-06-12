@@ -34,11 +34,11 @@ const Hero = () => {
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                 Hello, I'm{' '}
                 <span className="text-yellow-400 block">Chanuka Gunasekara</span>
-                <span className="block text-4xl lg:text-5xl">Data Analyst &amp; Developer</span>
+                <span className="block text-4xl lg:text-5xl">Data Analyst & Engineer</span>
               </h1>
               <p className="text-lg text-white/90 max-w-lg">
                 Passionate final-year undergraduate specializing in Statistics and Operational Research. 
-                Transforming data into insights and building innovative solutions through AI and full-stack development.
+                Transforming data into insights and building innovative data engineering solutions through AI and advanced analytics.
               </p>
             </div>
 
