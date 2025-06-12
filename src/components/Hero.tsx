@@ -10,10 +10,6 @@ const Hero = () => {
       });
     }
   };
-
-  const handleDownloadCV = () => {
-    window.open('https://drive.google.com/file/d/1b9Ad-qLScDfRV77qF8eyD6vllBseyDnN/view?usp=sharing', '_blank');
-  };
   
   return <section id="home" className="min-h-screen bg-indigo-700 flex items-center relative overflow-hidden">
       {/* Decorative elements */}
@@ -49,12 +45,6 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button onClick={scrollToContact} className="bg-yellow-400 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
                 Contact Me
-              </button>
-              <button 
-                onClick={handleDownloadCV}
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo-900 transition-all duration-300 transform hover:scale-105"
-              >
-                Download CV
               </button>
             </div>
           </div>

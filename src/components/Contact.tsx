@@ -1,3 +1,4 @@
+
 import { Mail, Phone, Linkedin, Github, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
@@ -137,7 +138,7 @@ const Contact = () => {
                 <MapPin size={24} />
                 <span className="font-semibold">Location</span>
               </div>
-              <p>University of Peradeniya, Sri Lanka</p>
+              <p>Kadawatha, Sri Lanka</p>
               <p className="text-sm opacity-90 mt-2">
                 Available for remote work and on-site collaborations
               </p>
