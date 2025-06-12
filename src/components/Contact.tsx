@@ -1,6 +1,6 @@
-
 import { Mail, Phone, Linkedin, Github, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,11 +9,47 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init('s8EUBtiR358TbGQNY');
+
+      // Send email using your service ID and template ID
+      await emailjs.send(
+        'service_0inmzob', // Your service ID
+        'template_bwyd5a3', // Your template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Chanuka Gunasekara'
+        }
+      );
+
+      console.log('Email sent successfully!');
+      setSubmitStatus('success');
+      
+      // Reset form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -112,6 +148,19 @@ const Contact = () => {
           <div className="bg-gray-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
             
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                Failed to send message. Please try again or contact me directly.
+              </div>
+            )}
+            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -127,6 +176,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                     placeholder="Your name"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
@@ -142,6 +192,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                     placeholder="your.email@example.com"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -159,6 +210,7 @@ const Contact = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                   placeholder="Project discussion, collaboration opportunity..."
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -175,15 +227,21 @@ const Contact = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 resize-none"
                   placeholder="Tell me about your project or how I can help you..."
                   required
+                  disabled={isSubmitting}
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-orange-500 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                disabled={isSubmitting}
+                className={`w-full ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-gradient-to-r from-purple-600 to-orange-500 hover:shadow-lg transform hover:scale-105'
+                } text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2`}
               >
                 <Send size={20} />
-                <span>Send Message</span>
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </button>
             </form>
           </div>
