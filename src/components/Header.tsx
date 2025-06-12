@@ -14,6 +14,10 @@ const Header = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
+  const handleDownloadCV = () => {
+    window.open('https://drive.google.com/file/d/1b9Ad-qLScDfRV77qF8eyD6vllBseyDnN/view?usp=sharing', '_blank');
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
       <div className="container mx-auto px-6 py-4">
@@ -33,7 +37,10 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <button className="bg-indigo-700 text-white px-6 py-2 rounded-full hover:bg-indigo-600 transition-all duration-300 flex items-center space-x-2">
+            <button 
+              onClick={handleDownloadCV}
+              className="bg-indigo-700 text-white px-6 py-2 rounded-full hover:bg-indigo-600 transition-all duration-300 flex items-center space-x-2"
+            >
               <Download size={16} />
               <span>Download CV</span>
             </button>
@@ -61,7 +68,10 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <button className="mt-4 bg-indigo-700 text-white px-6 py-2 rounded-full flex items-center space-x-2">
+            <button 
+              onClick={handleDownloadCV}
+              className="mt-4 bg-indigo-700 text-white px-6 py-2 rounded-full flex items-center space-x-2"
+            >
               <Download size={16} />
               <span>Download CV</span>
             </button>
