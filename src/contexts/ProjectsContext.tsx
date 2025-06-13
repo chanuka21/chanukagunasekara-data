@@ -1,3 +1,4 @@
+
 import { createContext, ReactNode, useState } from 'react';
 
 export interface Project {
@@ -49,11 +50,24 @@ const defaultProjects = [
     githubUrl: "https://github.com/chanuka21/BlinkIT_Grocery_Sales_Data.git"
   },
   {
+    title: "Electric Vehicle Data Analysis",
+    description: "Interactive Tableau dashboard analyzing electric vehicle data with comprehensive KPIs and trend visualizations for EV market insights.",
+    tools: ["Tableau", "MS Excel", "Data Visualization", "Dashboard Design", "Data Analysis"],
+    category: "Data Analysis",
+    image: "bg-indigo-700",
+    fullImage: "/lovable-uploads/1b972874-dc51-4027-832d-395872123ac2.png",
+    purpose: "This project aimed to analyze electric vehicle data and create an interactive dashboard to visualize key performance indicators (KPIs) and provide insights into various aspects of electric vehicle usage and trends. The dashboard allows users to explore data from different perspectives using filters and interactive elements.",
+    role: "In this project, I was responsible for developing an interactive dashboard in Tableau to analyze electric vehicle data. I identified and visualized key performance indicators (KPIs) such as total vehicles, electric range, total BEVs, and PHEVs. I created various charts to provide granular insights, including the number of electric vehicles registered by different models, total vehicles by location, top 10 vehicles by make, eligibility by Clean Alternative Fuel Vehicle (CAF), and total vehicles by model. I also implemented interactive features, such as filter panels and quick filters, to allow users to drill down into specific data.",
+    challenges: "Working with large datasets containing diverse vehicle specifications and geographical data required careful data preprocessing and optimization for dashboard performance.",
+    outcomes: "Created a comprehensive dashboard showcasing electric vehicle trends with key metrics including 150,413 total vehicles, 67.83 miles average electric range, 116,745 BEV vehicles, and 33,668 PHEV vehicles. The interactive dashboard provides valuable insights for policy makers and industry stakeholders to understand EV adoption patterns.",
+    githubUrl: "https://github.com/chanuka21/Electric-Vehicle-Data-Analysis-in-Tableau.git"
+  },
+  {
     title: "Pizza Sales Analysis Report",
     description: "In-depth analysis focusing on sales trends, best-selling products, and customer behavior patterns.",
     tools: ["Excel", "Power BI", "Statistical Analysis", "Data Visualization", "DAX"],
     category: "Data Analysis",
-    image: "bg-indigo-700",
+    image: "bg-indigo-800",
     fullImage: "https://i.postimg.cc/9F3tGwbZ/Screenshot-109.png",
     purpose: "This project was developed to analyze pizza sales data, providing a comprehensive overview of sales performance. The main objectives were to identify popular pizza categories and sizes, understand daily and monthly sales trends, and highlight best-selling and worst-selling pizzas by revenue, quantity, and total orders. This analysis aims to support business decisions related to menu optimization, inventory management, and marketing strategies.",
     role: "In this project, I was responsible for the end-to-end development of the Pizza Sales Report. My key responsibilities included importing and cleaning the raw pizza sales data, developing a robust data model within Power BI to connect various sales attributes, designing and implementing interactive visualizations to display key metrics such as Total Revenue, Average Order Value, Total Pizza Sold, Total Orders, and Average Pizza Per Order, creating charts to show daily and monthly trends for total orders, and identifying and visualizing the top and bottom 5 pizzas by revenue, quantity, and total orders.",
@@ -66,7 +80,7 @@ const defaultProjects = [
     description: "Machine learning model using Python and scikit-learn Random Forest regression with high predictive accuracy.",
     tools: ["Python", "Scikit-learn", "Random Forest", "Data Science", "Pandas", "NumPy"],
     category: "Machine Learning",
-    image: "bg-indigo-800",
+    image: "bg-indigo-900",
     fullImage: "https://i.postimg.cc/wTNNcY8T/Screenshot-130.png",
     purpose: "The primary purpose of this project was to develop a machine learning model capable of accurately predicting laptop prices based on various specifications. This involved identifying key features influencing laptop costs, performing data preprocessing, and training different regression models to build a robust predictive tool.",
     role: "In this project, I was responsible for the end-to-end development of the laptop price prediction model. My key responsibilities included Data Collection and Loading: Sourcing and loading the raw laptop price dataset (laptop_price.csv). Data Preprocessing and Cleaning: Handling missing values (though none were found in this dataset), cleaning and transforming categorical and numerical features (e.g., converting 'Ram' and 'Weight' to numerical types, extracting features like 'Touchscreen' and 'IPS' from 'ScreenResolution'). Feature Engineering: Creating new, more insightful features from existing ones (e.g., categorizing CPU names into broader types like 'Intel Core i7', 'AMD', 'Other'). Model Building and Training: Applying various regression algorithms, including Linear Regression, Lasso Regression, Decision Tree Regressor, and Random Forest Regressor, to find the best-performing model for price prediction. Model Evaluation: Assessing the performance of different models to identify the most accurate one (Random Forest Regressor showed the highest accuracy among tested models). Code Implementation: Writing and organizing the Python code within a Jupyter Notebook to ensure a clear and reproducible workflow.",
@@ -79,7 +93,7 @@ const defaultProjects = [
     description: "Intelligent recommendation system utilizing NLP, machine learning, and cosine similarity for personalized movie suggestions based on content-based filtering techniques.",
     tools: ["Python", "Pandas", "NumPy", "NLTK", "Scikit-learn", "CountVectorizer", "Cosine Similarity", "Pickle"],
     category: "AI/ML",
-    image: "bg-indigo-900",
+    image: "bg-indigo-500",
     fullImage: "https://i.postimg.cc/Njh1Wf7H/Screenshot-129.png",
     purpose: "The primary purpose of this project was to develop a movie recommendation system that suggests similar movies to a user based on their input of a movie title. The system aims to enhance user experience by providing personalized movie suggestions, leveraging content-based filtering techniques.",
     role: "In this project, I was responsible for the end-to-end development of the movie recommender system. My key responsibilities included Data Acquisition and Merging: Loading and combining movie details and credits datasets from TMDB to create a unified dataset. Data Preprocessing: Cleaning and transforming raw text data, including parsing JSON-like strings for genres, keywords, and cast, and applying stemming to create a consistent set of tags for each movie. Feature Extraction: Converting the processed textual movie features into a numerical format using CountVectorizer suitable for machine learning algorithms. Similarity Calculation: Computing the cosine similarity between all movie pairs based on their vectorized features to quantify their resemblance. Recommendation Logic Development: Implementing a function to take a movie name as input and return the top similar movies based on the calculated similarity scores. Model Saving: Saving the processed data and the similarity matrix for efficient loading and prediction in a deployed environment. Web Integration (implied): Setting up the user interface to allow for interactive movie recommendations.",
