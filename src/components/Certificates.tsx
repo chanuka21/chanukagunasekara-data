@@ -23,6 +23,20 @@ const Certificates = () => {
       date: "2023",
       description: "Comprehensive training in ETL processes using Power BI's Power Query for data transformation and loading.",
       link: "https://coursera.org/share/3aefe537a962f609e83867c09184a4ed"
+    },
+    {
+      title: "Data Analysis and Visualization with Power BI",
+      issuer: "Coursera",
+      date: "2024",
+      description: "Advanced techniques in data analysis and creating compelling visualizations using Microsoft Power BI.",
+      link: "https://coursera.org/share/0628ab23ec5c47da3927ed9cbcd90054"
+    },
+    {
+      title: "Microsoft Power BI Data Analyst Professional Certificate",
+      issuer: "Coursera",
+      date: "2024",
+      description: "Comprehensive professional certification covering all aspects of data analysis using Microsoft Power BI.",
+      link: "https://coursera.org/share/7b237c95902c848e1df034ef08a46511"
     }
   ];
 
