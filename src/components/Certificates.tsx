@@ -25,17 +25,17 @@ const Certificates = () => {
       link: "https://coursera.org/share/3aefe537a962f609e83867c09184a4ed"
     },
     {
-      title: "Data Analysis and Visualization with Power BI",
+      title: "Python for Data Science, AI & Development",
       issuer: "Coursera",
       date: "2024",
-      description: "Advanced techniques in data analysis and creating compelling visualizations using Microsoft Power BI.",
+      description: "Comprehensive Python programming course covering data science, artificial intelligence, and development practices.",
       link: "https://coursera.org/share/0628ab23ec5c47da3927ed9cbcd90054"
     },
     {
-      title: "Microsoft Power BI Data Analyst Professional Certificate",
+      title: "Data Modeling in Power BI",
       issuer: "Coursera",
       date: "2024",
-      description: "Comprehensive professional certification covering all aspects of data analysis using Microsoft Power BI.",
+      description: "Advanced data modeling techniques and best practices for creating efficient and scalable Power BI solutions.",
       link: "https://coursera.org/share/7b237c95902c848e1df034ef08a46511"
     }
   ];
