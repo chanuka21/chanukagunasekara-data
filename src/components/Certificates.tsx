@@ -56,14 +56,9 @@ const Certificates = () => {
               key={index}
               className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-indigo-600"
             >
-              <div className="flex justify-between items-start mb-4">
-                <div className="flex items-center gap-3">
-                  <Award className="text-indigo-600" size={24} />
-                  <h3 className="text-xl font-bold text-gray-800">{cert.title}</h3>
-                </div>
-                <span className="text-sm font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                  {cert.date}
-                </span>
+              <div className="flex items-center gap-3 mb-4">
+                <Award className="text-indigo-600" size={24} />
+                <h3 className="text-xl font-bold text-gray-800">{cert.title}</h3>
               </div>
               
               <p className="text-gray-600 mb-3">{cert.description}</p>
