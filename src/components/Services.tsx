@@ -66,27 +66,6 @@ const SkillsExpertise = () => {
             </div>
           ))}
         </div>
-
-        {/* CTA Section */}
-        <div className="mt-16 bg-indigo-700 rounded-2xl p-8 text-center text-white relative overflow-hidden">
-          <div className="absolute top-5 right-5">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M10 25C15 15 25 15 30 25" stroke="white" strokeWidth="1" strokeLinecap="round"/>
-            </svg>
-          </div>
-          <div className="absolute bottom-5 left-5">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-              <path d="M5 15C10 5 20 5 25 15" stroke="white" strokeWidth="1" strokeLinecap="round"/>
-            </svg>
-          </div>
-          <h3 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
-          <p className="text-lg mb-6 opacity-90">
-            Let's collaborate to transform your data into actionable insights and build innovative engineering solutions.
-          </p>
-          <button className="bg-yellow-400 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-300">
-            Get Started Today
-          </button>
-        </div>
       </div>
     </section>
   );
