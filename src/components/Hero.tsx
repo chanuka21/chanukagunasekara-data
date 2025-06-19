@@ -63,10 +63,6 @@ const Hero = () => {
                 </svg>
               </div>
             </div>
-            <div className="absolute -bottom-4 right-10 bg-white p-3 rounded-lg shadow-lg">
-              <div className="text-indigo-700 font-bold">Looking for</div>
-              <div className="text-gray-700">Data Science Internship</div>
-            </div>
           </div>
         </div>
       </div>
