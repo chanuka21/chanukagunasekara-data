@@ -1,4 +1,3 @@
-
 import { Mail, Phone, Linkedin, Github, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
@@ -96,9 +95,6 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to collaborate? Let's discuss your next data science project or data engineering needs.
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
